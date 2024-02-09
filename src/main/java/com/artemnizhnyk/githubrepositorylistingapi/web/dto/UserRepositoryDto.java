@@ -5,7 +5,7 @@ import lombok.Getter;
 
 
 @Getter
-public class UserGitHubRepositoryDto {
+public class UserRepositoryDto {
 
     private String name;
     private Owner owner;
@@ -14,7 +14,7 @@ public class UserGitHubRepositoryDto {
     private boolean fork;
 
     @Getter
-    public class Owner {
+    public static class Owner {
         private String login;
     }
 }
