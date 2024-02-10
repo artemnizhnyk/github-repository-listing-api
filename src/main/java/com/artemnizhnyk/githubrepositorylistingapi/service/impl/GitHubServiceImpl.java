@@ -64,8 +64,6 @@ public class GitHubServiceImpl implements GitHubService {
 
                             return ListingResultResponse.Branch.builder()
                                     .name(branchDto.getName())
-                                    .lastCommitMessage(lastCommit.getCommit().getMessage())
-                                    .lastCommitUrl(lastCommit.getUrl())
                                     .lastCommitSha(lastCommit.getSha())
                                     .build();
                         }
