@@ -6,7 +6,7 @@ This is a repository for the Github Repository Listing api.
 
 Make sure you have auth token for GitHub.
 It's only 60 requests per our available without authorization.
-Application use more than 60 requests to get the result.
+Application use more than 60 requests to get the final request's result.
 Create token you can [here](https://github.com/settings/tokens),
 You don't need to define any accesses for thi token.
 
