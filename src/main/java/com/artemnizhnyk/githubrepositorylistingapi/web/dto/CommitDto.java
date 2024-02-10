@@ -9,6 +9,7 @@ public class CommitDto {
     private Commit commit;
     @JsonProperty("html_url")
     private String url;
+
     @Getter
     public static class Commit {
 
