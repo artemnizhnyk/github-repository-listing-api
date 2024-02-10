@@ -59,11 +59,16 @@ public class GitHubServiceImpl implements GitHubService {
         )
                 .stream()
 
-                .map(branchDto -> ListingResultResponse.Branch.builder()
-                        .name(branchDto.getName())
-                        .lastCommitMessage(getBranchLastCommit(branchDto.getCommit().getUrl()).getCommit().getMessage())
-                        .lastCommitUrl(getBranchLastCommit(branchDto.getCommit().getUrl()).getUrl())
-                        .build()
+                .map(branchDto -> {
+                            CommitDto lastCommit = getBranchLastCommit(branchDto.getCommit().getUrl());
+
+                            return ListingResultResponse.Branch.builder()
+                                    .name(branchDto.getName())
+                                    .lastCommitMessage(lastCommit.getCommit().getMessage())
+                                    .lastCommitUrl(lastCommit.getUrl())
+                                    .lastCommitSha(lastCommit.getSha())
+                                    .build();
+                        }
                 ).toList();
     }
 

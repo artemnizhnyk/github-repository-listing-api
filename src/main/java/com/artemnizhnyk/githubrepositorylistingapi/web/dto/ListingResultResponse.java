@@ -20,5 +20,6 @@ public class ListingResultResponse {
         private String name;
         private String lastCommitMessage;
         private String lastCommitUrl;
+        private String lastCommitSha;
     }
 }
